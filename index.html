@@ -8,6 +8,71 @@
   </head>
 
   <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <!-- Left -->
+      <div class="navbar__left">
+        <button class="navbar__lang">
+          <span class="navbar__lang-label">TH - THB</span>
+          <img
+            src="./assets/icons/arrow-down-solid.svg"
+            alt=""
+            class="navbar__icon"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
+
+      <!-- Center -->
+      <button
+        class="navbar__toggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <img
+          class="navbar__icon navbar__icon--menu"
+          src="./assets/icons/hamburger-menu.svg"
+          alt="Hamburger menu"
+        />
+        <img
+          class="navbar__icon navbar__icon--close"
+          src="./assets/icons/close.svg"
+          alt="Close icon"
+        />
+      </button>
+
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="#women" class="navbar__link">women</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#collections" class="navbar__link">collections</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#editorial" class="navbar__link">editorial</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#news" class="navbar__link">news</a>
+        </li>
+        <li class="navbar__item">
+          <a href="#stories" class="navbar__link">stories</a>
+        </li>
+      </ul>
+
+      <!-- Right -->
+      <div class="navbar__right">
+        <button class="navbar__signin">SIGN IN</button>
+
+        <button class="navbar__bag" aria-label="Shopping bag">
+          <img
+            src="./assets/icons/bag-shopping.svg"
+            alt="Shopping bag"
+            class="navbar__icon"
+          />
+        </button>
+      </div>
+    </nav>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

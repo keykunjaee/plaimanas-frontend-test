@@ -22,3 +22,116 @@ body {
   background-color: var(--color-white);
   color: var(--color-black);
 }
+
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navbar {
+  position: relative;
+  background: var(--color-white);
+  height: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+}
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+
+.navbar__lang,
+.navbar__item,
+.navbar__signin {
+  padding: 10.5px 10px;
+}
+
+.navbar__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar__toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .navbar__toggle {
+    display: none;
+  }
+}
+
+.navbar__toggle.is-open .navbar__icon--menu {
+  display: none;
+}
+
+.navbar__icon--close {
+  display: none;
+}
+
+.navbar__toggle.is-open .navbar__icon--close {
+  display: block;
+}
+
+.navbar__menu {
+  display: none;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .navbar__menu {
+    display: flex;
+  }
+}
+
+.navbar__menu.is-open {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.navbar__link,
+.navbar__signin {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.navbar__right {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .navbar__right {
+    gap: 4px;
+  }
+}
+
+.navbar__signin {
+  display: inline-block;
+}
+
+.navbar__bag {
+  padding: 8px 2px;
+  display: flex;
+  align-items: center;
+  transform: translateY(-1px);
+}
+@media (min-width: 768px) {
+  .navbar__bag {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+  }
+}
