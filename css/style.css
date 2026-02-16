@@ -30,6 +30,68 @@ button {
   cursor: pointer;
 }
 
+/* ===============
+   Typography
+=============== */
+
+.typo-heading-lg,
+.typo-display-lg,
+.typo-display-md,
+.typo-display-sm {
+  font-family: 'HankenGrotesk';
+  font-weight: 900;
+}
+
+.typo-heading-lg {
+  font-size: 24px;
+}
+.typo-heading-md {
+  font-size: 16px;
+  font-weight: 700;
+}
+.typo-heading-sm {
+  font-size: 14px;
+  font-weight: 700;
+}
+.typo-body-md {
+  font-size: 14px;
+}
+.typo-body-sm {
+  font-size: 12px;
+}
+
+.typo-display-lg {
+  font-size: 40px;
+}
+.typo-display-md {
+  font-size: 30px;
+}
+.typo-display-sm {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .typo-heading-lg {
+    font-size: 40px;
+  }
+  .typo-heading-sm {
+    font-size: 16px;
+  }
+  .typo-body-sm {
+    font-size: 14px;
+  }
+
+  .typo-display-lg {
+    font-size: 80px;
+  }
+  .typo-display-md {
+    font-size: 60px;
+  }
+  .typo-display-sm {
+    font-size: 40px;
+  }
+}
+
 .navbar {
   position: relative;
   background: var(--color-white);
@@ -39,6 +101,7 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 0 14px;
+  font-size: 13px;
 }
 @media (min-width: 1024px) {
   .navbar {
