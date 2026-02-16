@@ -26,5 +26,6 @@ Open `index.html` directly in your browser.
 └── assets/
     ├── images/
     ├── icons/
+    ├── videos/
     └── fonts/
 ```
