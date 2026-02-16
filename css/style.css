@@ -92,6 +92,11 @@ button {
   }
 }
 
+/* ===============
+   Components
+=============== */
+
+/* Navbar */
 .navbar {
   position: relative;
   background: var(--color-white);
@@ -163,6 +168,7 @@ button {
   display: flex;
   flex-direction: column;
   text-align: center;
+  z-index: 10;
 }
 
 .navbar__link,
@@ -197,4 +203,36 @@ button {
     display: flex;
     align-items: center;
   }
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 11px 7px 0;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    padding: 25px 20px 0;
+  }
+}
+
+.hero__image {
+  width: 100%;
+  mix-blend-mode: difference;
 }
