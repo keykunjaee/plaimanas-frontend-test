@@ -14,3 +14,14 @@ document.querySelectorAll('.navbar__link').forEach((link) => {
     e.preventDefault()
   })
 })
+
+const heroVideo = document.querySelector('.hero__video')
+const heroImage = document.querySelector('.hero__image')
+
+function showFallback() {
+  heroVideo.style.display = 'none'
+  heroImage.style.display = 'block'
+}
+
+heroVideo.addEventListener('error', showFallback)
+heroVideo.play().catch(showFallback)
