@@ -15,6 +15,8 @@
 :root {
   --color-white: white;
   --color-black: black;
+
+  --navbar-height: 45px;
 }
 
 body {
@@ -96,11 +98,17 @@ button {
    Components
 =============== */
 
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 /* Navbar */
 .navbar {
   position: relative;
   background: var(--color-white);
-  height: 45px;
+  height: var(--navbar-height);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -220,11 +228,13 @@ button {
 }
 
 .hero__title {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: var(--navbar-height);
   left: 0;
   width: 100%;
   padding: 11px 7px 0;
+  z-index: 10;
+  mix-blend-mode: difference;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -234,5 +244,5 @@ button {
 
 .hero__image {
   width: 100%;
-  mix-blend-mode: difference;
+  display: block;
 }
