@@ -249,6 +249,7 @@ button {
   padding: 11px 7px 0;
   z-index: 10;
   mix-blend-mode: difference;
+  pointer-events: none;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -685,4 +686,193 @@ button {
   .faq__item.is-open .faq__answer {
     max-height: 60px;
   }
+}
+
+/* Inquiry Section */
+.inquiry {
+  padding: 100px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .inquiry {
+    max-width: 650px;
+  }
+}
+@media (min-width: 1024px) {
+  .inquiry {
+    padding: 100px 0;
+    flex-direction: row;
+    gap: 145px;
+    max-width: unset;
+  }
+}
+
+.inquiry__title {
+  max-width: 375px;
+}
+
+.inquiry__heading {
+  font-family: 'HankenGrotesk', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.inquiry__description {
+  font-size: 14px;
+  max-width: 305px;
+}
+
+.inquiry__form {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .inquiry__form {
+    max-width: 650px;
+  }
+}
+
+.inquiry__work-type {
+  display: flex;
+  gap: 21px;
+}
+
+.inquiry__option {
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.inquiry__radio {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.inquiry__radio:checked::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: var(--color-black);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inquiry__fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 21px 0;
+}
+@media (min-width: 768px) {
+  .inquiry__fields {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.inquiry__field {
+  position: relative;
+  padding: 18px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.inquiry__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  opacity: 30%;
+}
+
+.inquiry__input,
+.inquiry__select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+.inquiry__input::placeholder,
+.inquiry__select {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.inquiry__select {
+  width: 100%;
+}
+
+.inquiry__select:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.inquiry__agreement {
+  display: flex;
+  align-items: center;
+}
+
+.inquiry__checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.inquiry__checkbox input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inquiry__checkbox input:checked + .inquiry__checkmark::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 9px;
+  border: 1px solid var(--color-black);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.inquiry__checkmark {
+  width: 17px;
+  height: 17px;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+}
+
+.inquiry__agreement-text {
+  font-size: 14px;
+  opacity: 50%;
+  transform: translateY(1px);
+}
+
+.inquiry__submit {
+  padding: 17px 47.5px;
+  background: var(--color-black);
+  color: var(--color-white);
+  margin-top: 40px;
 }

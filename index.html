@@ -421,6 +421,84 @@
 
         <div class="faq__list faq__list-4"></div>
       </section>
+
+      <!-- Inquiry Section -->
+      <section class="inquiry">
+        <div class="inquiry__title">
+          <p class="inquiry__heading">Make an inquiry</p>
+          <p class="inquiry__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+            nisl non rhoncus commodo.
+          </p>
+        </div>
+
+        <div class="inquiry__form">
+          <div class="inquiry__work-type">
+            <div class="inquiry__option">
+              <input
+                class="inquiry__radio"
+                type="radio"
+                id="work_type_onsite"
+                name="work_type"
+                value="onsite"
+                checked
+              />
+              <label for="work_type_onsite">Onsite</label>
+            </div>
+
+            <div class="inquiry__option">
+              <input
+                class="inquiry__radio"
+                type="radio"
+                id="work_type_hybrid"
+                name="work_type"
+                value="hybrid"
+              />
+              <label for="work_type_hybrid">Hybrid</label>
+            </div>
+          </div>
+
+          <div class="inquiry__fields">
+            <div class="inquiry__field">
+              <input class="inquiry__input" placeholder="Full name*" />
+            </div>
+            <div class="inquiry__field">
+              <label for="email" class="inquiry__label">Email*</label>
+              <input
+                type="email"
+                class="inquiry__input"
+                placeholder="Email*"
+                value="Plaimanas@gmail.com"
+              />
+            </div>
+            <div class="inquiry__field">
+              <input class="inquiry__input" placeholder="Phone Number*" />
+            </div>
+            <div class="inquiry__field">
+              <select id="subject" class="inquiry__select" disabled>
+                <option value="">Select Subject*</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="inquiry__agreement">
+            <label class="inquiry__checkbox">
+              <input
+                type="checkbox"
+                name="agreement"
+                value="accepted"
+                required
+              />
+              <span class="inquiry__checkmark"></span>
+              <span class="inquiry__agreement-text">
+                I agree to all terms & conditions
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="inquiry__submit">SEND</button>
+        </div>
+      </section>
     </main>
 
     <script src="./js/script.js"></script>
