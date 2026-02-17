@@ -85,6 +85,18 @@ button {
   }
 
   .typo-display-lg {
+    font-size: 60px;
+  }
+  .typo-display-md {
+    font-size: 45px;
+  }
+  .typo-display-sm {
+    font-size: 29px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .typo-display-lg {
     font-size: 80px;
   }
   .typo-display-md {
