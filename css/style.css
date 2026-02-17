@@ -40,7 +40,7 @@ button {
 .typo-display-lg,
 .typo-display-md,
 .typo-display-sm {
-  font-family: 'HankenGrotesk';
+  font-family: 'HankenGrotesk', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -415,4 +415,82 @@ button {
   .category-card__image--md {
     width: 454px;
   }
+}
+
+/* Scroll Banner Section */
+.scroll-banner {
+  position: relative;
+  height: 85px;
+  background: black;
+  overflow: hidden;
+}
+
+.scroll-banner__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: scrollText 20s linear infinite;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .scroll-banner__track {
+    gap: 57.5px;
+    animation: scrollText 25s linear infinite;
+  }
+}
+@media (min-width: 1024px) {
+  .scroll-banner__track {
+    gap: 95px;
+  }
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-banner__group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-size: 60px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .scroll-banner__group {
+    gap: 57.5px;
+  }
+}
+@media (min-width: 1024px) {
+  .scroll-banner__group {
+    gap: 95px;
+  }
+}
+
+.scroll-banner__text {
+  font-family: 'HankenGrotesk', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  font-size: 24px;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .scroll-banner__text {
+    font-size: 42px;
+  }
+}
+@media (min-width: 1024px) {
+  .scroll-banner__text {
+    font-size: 60px;
+  }
+}
+
+.scroll-banner__icon--reverse {
+  transform: scaleX(-1);
 }
