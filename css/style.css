@@ -494,3 +494,52 @@ button {
 .scroll-banner__icon--reverse {
   transform: scaleX(-1);
 }
+
+/* Services Section */
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 100px 0;
+}
+@media (min-width: 768px) {
+  .services {
+    gap: 87px;
+  }
+}
+@media (min-width: 1024px) {
+  .services {
+    flex-direction: row;
+    gap: 126px;
+    padding: 140px 0;
+  }
+}
+
+.services__item {
+  max-width: 283px;
+}
+@media (min-width: 768px) {
+  .services__item {
+    max-width: 420px;
+  }
+}
+@media (min-width: 1024px) {
+  .services__item {
+    max-width: 283px;
+  }
+}
+
+.services__title {
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.services__description {
+  opacity: 60%;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
