@@ -463,6 +463,19 @@ button {
 .hero__title-image {
   width: 100%;
   display: block;
+  transform-origin: 50% 0%;
+  transition: 1s;
+}
+
+@media (min-width: 768px) {
+  .hero__title-image.is-scaled {
+    transform: scale(0.4);
+  }
+}
+@media (min-width: 1024px) {
+  .hero__title-image.is-scaled {
+    transform: scale(0.25);
+  }
 }
 
 .hero-image {

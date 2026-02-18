@@ -116,6 +116,21 @@ subMenu.addEventListener('click', () => {
 })
 
 /* ====================
+   Hero Title Scroll Effect
+==================== */
+const heroTitleImage = document.querySelector('.hero__title-image')
+
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY
+
+  if (scrollPosition <= 0) {
+    heroTitleImage.classList.remove('is-scaled')
+  } else {
+    heroTitleImage.classList.add('is-scaled')
+  }
+})
+
+/* ====================
    Fallback Image
 ==================== */
 
