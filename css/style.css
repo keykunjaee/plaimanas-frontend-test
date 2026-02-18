@@ -207,7 +207,11 @@ button {
 }
 @media (min-width: 768px) {
   .navbar__menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
+    gap: 24px;
   }
 }
 
