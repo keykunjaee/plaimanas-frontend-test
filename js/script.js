@@ -118,6 +118,7 @@ subMenu.addEventListener('click', () => {
 /* ====================
    Hero Title Scroll Effect
 ==================== */
+
 const heroTitleImage = document.querySelector('.hero__title-image')
 
 window.addEventListener('scroll', () => {
