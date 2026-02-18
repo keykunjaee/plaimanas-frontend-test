@@ -20,6 +20,35 @@ document.querySelectorAll('.navbar__link').forEach((link) => {
 })
 
 /* ====================
+   Language Button
+==================== */
+
+const langButton = document.querySelector('.navbar__lang')
+const langLabel = document.querySelector('.navbar__lang-label')
+const langDropdown = document.querySelector('.navbar__lang-dropdown')
+const langOption = document.querySelector('.navbar__lang-option')
+
+langButton.addEventListener('click', () => {
+  langButton.classList.toggle('is-open')
+  langDropdown.classList.toggle('is-open')
+
+  const isOpen = langDropdown.classList.contains('is-open')
+  langButton.setAttribute('aria-expanded', isOpen)
+})
+
+langOption.addEventListener('click', () => {
+  const currentLabel = langLabel.textContent
+  const currentOption = langOption.textContent
+
+  langLabel.textContent = currentOption
+  langOption.textContent = currentLabel
+
+  langButton.setAttribute('aria-expanded', 'false')
+  langButton.classList.remove('is-open')
+  langDropdown.classList.remove('is-open')
+})
+
+/* ====================
    Fallback Image
 ==================== */
 

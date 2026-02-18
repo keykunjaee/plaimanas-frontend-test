@@ -13,7 +13,11 @@
       <nav class="navbar">
         <!-- Left -->
         <div class="navbar__left">
-          <button class="navbar__lang">
+          <button
+            class="navbar__lang"
+            aria-expanded="false"
+            aria-controls="lang-dropdown"
+          >
             <span class="navbar__lang-label">TH - THB</span>
             <img
               src="./assets/icons/arrow-down-solid.svg"
@@ -22,6 +26,9 @@
               aria-hidden="true"
             />
           </button>
+          <div class="navbar__lang-dropdown">
+            <button class="navbar__lang-option">US - USD</button>
+          </div>
         </div>
 
         <!-- Center -->

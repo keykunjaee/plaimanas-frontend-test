@@ -135,6 +135,10 @@ button {
   }
 }
 
+.navbar__left {
+  position: relative;
+}
+
 .navbar__lang,
 .navbar__item,
 .navbar__signin {
@@ -142,9 +146,35 @@ button {
 }
 
 .navbar__lang {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  background: var(--color-white);
+  opacity: 1;
+  z-index: 10;
+  transition: opacity 0.1s linear;
+}
+
+.navbar__lang.is-open {
+  opacity: 0.5;
+}
+
+.navbar__lang-dropdown {
+  position: absolute;
+  background: var(--color-white);
+  padding: 10px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+  transition: all 0.3s linear;
+  width: max-content;
+}
+
+.navbar__lang-dropdown.is-open {
+  opacity: 1;
+  transform: translate(-50%, 100%);
 }
 
 .navbar__toggle {
@@ -538,7 +568,7 @@ button {
 }
 
 .services__description {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .text-underline {
@@ -798,7 +828,7 @@ button {
   top: 0;
   left: 0;
   font-size: 10px;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .inquiry__input,
