@@ -13,12 +13,6 @@ navbarToggle.addEventListener('click', () => {
   navbarToggle.setAttribute('aria-expanded', isOpen)
 })
 
-document.querySelectorAll('.navbar__link').forEach((link) => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault()
-  })
-})
-
 /* ====================
    Language Button
 ==================== */
@@ -56,6 +50,29 @@ window.addEventListener('scroll', () => {
     langButton.classList.remove('is-open')
     langDropdown.classList.remove('is-open')
   }
+})
+
+/* ====================
+   Editorial Submenu
+==================== */
+
+const editorialMenu = document.getElementById('editorial-menu')
+const subMenu = document.querySelector('.navbar__submenu')
+const backdrop = document.querySelector('.navbar__backdrop')
+const editorialSubMenu = document.querySelector('.navbar__link--button')
+
+editorialMenu.addEventListener('mouseenter', () => {
+  subMenu.classList.add('is-open')
+  backdrop.classList.add('is-open')
+
+  editorialSubMenu.classList.add('is-hidden')
+})
+
+editorialMenu.addEventListener('mouseleave', () => {
+  subMenu.classList.remove('is-open')
+  backdrop.classList.remove('is-open')
+
+  editorialSubMenu.classList.remove('is-hidden')
 })
 
 /* ====================
