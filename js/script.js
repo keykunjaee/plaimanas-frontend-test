@@ -48,6 +48,16 @@ langOption.addEventListener('click', () => {
   langDropdown.classList.remove('is-open')
 })
 
+window.addEventListener('scroll', () => {
+  const isExpanded = langButton.getAttribute('aria-expanded') === 'true'
+
+  if (isExpanded) {
+    langButton.setAttribute('aria-expanded', 'false')
+    langButton.classList.remove('is-open')
+    langDropdown.classList.remove('is-open')
+  }
+})
+
 /* ====================
    Fallback Image
 ==================== */
