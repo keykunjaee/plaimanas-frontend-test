@@ -690,6 +690,7 @@ button {
 
 /* Inquiry Section */
 .inquiry {
+  position: relative;
   padding: 100px 22px;
   display: flex;
   flex-direction: column;
@@ -875,4 +876,17 @@ button {
   background: var(--color-black);
   color: var(--color-white);
   margin-top: 40px;
+}
+
+.inquiry__back-to-top {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 12px;
+  padding: 10.5px 10px;
+}
+@media (min-width: 768px) {
+  .inquiry__back-to-top {
+    bottom: 0px;
+  }
 }

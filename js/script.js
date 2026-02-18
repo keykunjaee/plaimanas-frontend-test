@@ -34,9 +34,9 @@ function showFallback() {
 heroVideo.addEventListener('error', showFallback)
 heroVideo.play().catch(showFallback)
 
-/* =========================
+/* ====================
    FAQ 
-========================= */
+==================== */
 
 const faqItems = document.querySelectorAll('.faq__item')
 
@@ -68,3 +68,18 @@ faqTabs.forEach((tab) => {
     activeContent.classList.add('is-active')
   })
 })
+
+/* ====================
+    Back To Top
+==================== */
+
+const backToTopBtn = document.getElementById('back-to-top')
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'auto'
+  })
+}
+
+backToTopBtn.addEventListener('click', scrollToTop)
