@@ -136,6 +136,12 @@ button {
 
 .navbar__left {
   position: relative;
+  z-index: 40;
+}
+@media (min-width: 768px) {
+  .navbar__left {
+    z-index: 10;
+  }
 }
 
 .navbar__lang,
