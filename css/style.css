@@ -651,26 +651,47 @@ button {
   justify-content: space-between;
 }
 
+.category-card__row .category-card__label {
+  width: 115px;
+  text-align: center;
+  line-height: 1.3;
+}
+@media (min-width: 768px) {
+  .category-card__row .category-card__label {
+    width: 185px;
+  }
+}
+@media (min-width: 1024px) {
+  .category-card__row .category-card__label {
+    width: max-content;
+  }
+}
+
 .category-card__image--lg {
   display: block;
   width: 100%;
   max-width: 346px;
   height: auto;
+  transform: scale(2.8);
+  transform-origin: top center;
 }
 .category-card__image--md {
   display: block;
   width: 100%;
   max-width: 161px;
   height: auto;
-  transform: translateY(0%);
+  transform: scale(2.8) translateY(0%);
+  transform-origin: top center;
   transition: transform 0.3s ease;
 }
 @media (min-width: 768px) {
   .category-card__image--lg {
     max-width: 662px;
+    transform: unset;
   }
   .category-card__image--md {
     max-width: 307.5px;
+    transform: unset;
   }
 }
 @media (min-width: 1024px) {
@@ -683,31 +704,40 @@ button {
 }
 
 .category-card__video--hover {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: none;
 }
-
-.category-card__media:hover > .category-card__video--hover {
-  opacity: 1;
+@media (min-width: 1024px) {
+  .category-card__video--hover {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .category-card__media:hover > .category-card__video--hover {
+    opacity: 1;
+  }
 }
 
 .category-card__image--hover {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  display: none;
 }
-
-.category-card__media:hover > .category-card__image--hover {
-  opacity: 1;
-}
-
-.category-card__media:hover
-  > .category-card__image--md:not(.category-card__image--hover) {
-  transform: translateY(3px);
+@media (min-width: 1024px) {
+  .category-card__image--hover {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .category-card__media:hover > .category-card__image--hover {
+    opacity: 1;
+  }
+  .category-card__media:hover
+    > .category-card__image--md:not(.category-card__image--hover) {
+    transform: translateY(1px);
+  }
 }
 
 /* Scroll Banner Section */
