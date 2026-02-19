@@ -413,6 +413,11 @@ button {
 
 .navbar__signin {
   display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.navbar__signin:hover {
+  opacity: 0.5;
 }
 
 .navbar__bag {
@@ -558,6 +563,7 @@ button {
 .category-card__label {
   color: var(--color-white);
   width: max-content;
+  z-index: 10;
 }
 
 .category-card__image,
@@ -599,6 +605,10 @@ button {
   }
 }
 
+.category-card--collection .category-card__media {
+  overflow: hidden;
+}
+
 .category-card--collection .category-card__label {
   position: absolute;
   top: 50%;
@@ -612,10 +622,14 @@ button {
 }
 
 .category-card__image--lg {
+  display: block;
   width: 346px;
 }
 .category-card__image--md {
+  display: block;
   width: 161px;
+  transform: translateY(0%);
+  transition: transform 0.3s ease;
 }
 @media (min-width: 768px) {
   .category-card__image--lg {
@@ -632,6 +646,34 @@ button {
   .category-card__image--md {
     width: 454px;
   }
+}
+
+.category-card__video--hover {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card__media:hover > .category-card__video--hover {
+  opacity: 1;
+}
+
+.category-card__image--hover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.category-card__media:hover > .category-card__image--hover {
+  opacity: 1;
+}
+
+.category-card__media:hover
+  > .category-card__image--md:not(.category-card__image--hover) {
+  transform: translateY(3px);
 }
 
 /* Scroll Banner Section */
