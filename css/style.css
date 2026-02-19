@@ -1070,10 +1070,13 @@ button {
   }
 }
 
-.inquiry__field {
+.inquiry__field,
+.inquiry__select {
   position: relative;
   padding: 18px 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
 }
 
 .inquiry__label {
@@ -1085,7 +1088,6 @@ button {
 }
 
 .inquiry__input,
-.inquiry__select,
 .footer__input {
   border: none;
   background: transparent;
@@ -1098,8 +1100,7 @@ button {
   font-size: 14px;
 }
 
-.inquiry__input::placeholder,
-.inquiry__select {
+.inquiry__input::placeholder {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.3);
 }
@@ -1108,9 +1109,50 @@ button {
   width: 100%;
 }
 
-.inquiry__select:disabled {
-  cursor: default;
-  opacity: 0.5;
+.inquiry__arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: auto;
+}
+
+.inquiry__toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inquiry__toggle.is-placeholder .inquiry__label--placeholder {
+  opacity: 0.3;
+}
+
+.inquiry__menu {
+  list-style: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  background: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  display: none;
+  z-index: 10;
+}
+
+.inquiry__item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.inquiry__item:hover {
+  background: #f8f9f8;
+}
+
+.inquiry__select.is-open .inquiry__menu {
+  display: block;
 }
 
 .inquiry__agreement {

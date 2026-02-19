@@ -544,10 +544,30 @@
             <div class="inquiry__field">
               <input class="inquiry__input" placeholder="Phone Number*" />
             </div>
-            <div class="inquiry__field">
-              <select id="subject" class="inquiry__select" disabled>
-                <option value="">Select Subject*</option>
-              </select>
+
+            <div class="inquiry__select" id="inquiry-select">
+              <button type="button" class="inquiry__toggle is-placeholder">
+                <span class="inquiry__label--placeholder">Select Subject*</span>
+                <img
+                  src="./assets/icons/arrow-down-grey.svg"
+                  alt=""
+                  class="inquiry__arrow"
+                />
+              </button>
+
+              <ul class="inquiry__menu">
+                <li class="inquiry__item" data-value="general-inquiry">
+                  General inquiry
+                </li>
+                <li class="inquiry__item" data-value="job-application">
+                  Job Application
+                </li>
+                <li class="inquiry__item" data-value="media-&-press">
+                  Media & Press
+                </li>
+              </ul>
+
+              <input type="hidden" name="subject" />
             </div>
           </div>
 

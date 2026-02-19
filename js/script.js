@@ -199,6 +199,31 @@ faqTabs.forEach((tab) => {
 })
 
 /* ====================
+    Inquiry Form Dropdown
+==================== */
+
+const inquirySelect = document.getElementById('inquiry-select')
+const inquiryToggle = inquirySelect.querySelector('.inquiry__toggle')
+const subjectLabel = inquirySelect.querySelector('.inquiry__label--placeholder')
+const subjectItems = inquirySelect.querySelectorAll('.inquiry__item')
+const hiddenInput = inquirySelect.querySelector('input')
+
+inquirySelect.addEventListener('click', () => {
+  inquirySelect.classList.toggle('is-open')
+})
+
+subjectItems.forEach((item) => {
+  item.addEventListener('click', (event) => {
+    subjectLabel.textContent = item.textContent
+    hiddenInput.value = item.dataset.value
+
+    event.stopPropagation()
+    inquiryToggle.classList.remove('is-placeholder')
+    inquirySelect.classList.remove('is-open')
+  })
+})
+
+/* ====================
     Back To Top
 ==================== */
 
