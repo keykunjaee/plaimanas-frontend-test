@@ -83,15 +83,20 @@ editorialMenu.addEventListener('mouseenter', () => {
 })
 
 editorialMenu.addEventListener('mouseleave', () => {
-  subMenu.classList.remove('is-open')
-  backdrop.classList.remove('is-open')
+  if (window.innerWidth >= 1024) {
+    subMenu.classList.remove('is-open')
+    backdrop.classList.remove('is-open')
 
-  editorialSubMenu.classList.remove('is-hidden')
+    editorialSubMenu.classList.remove('is-hidden')
+  }
 })
 
 editorialMenu.addEventListener('click', () => {
   if (window.innerWidth < 1024) {
     subMenu.classList.toggle('is-open')
+    backdrop.classList.toggle('is-open')
+
+    editorialSubMenu.classList.toggle('is-hidden')
   }
 })
 
@@ -104,6 +109,7 @@ function closeMenuItem() {
   backdrop.classList.remove('is-open')
 
   backdropWhite.classList.remove('is-open')
+  editorialSubMenu.classList.remove('is-hidden')
 
   if (window.innerWidth < 768) heroTitle.classList.remove('is-menu-open')
 
@@ -117,8 +123,13 @@ navbarMenu.addEventListener('click', (e) => {
   closeMenuItem()
 })
 
-subMenu.addEventListener('click', () => {
-  closeMenuItem()
+subMenu.addEventListener('click', (event) => {
+  const clickedItem = event.target.closest('.navbar__subitem')
+
+  if (clickedItem) {
+    event.stopPropagation()
+    closeMenuItem()
+  }
 })
 
 /* ====================
