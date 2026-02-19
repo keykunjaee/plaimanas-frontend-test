@@ -512,39 +512,49 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .category-card {
+    padding: 0 50px;
+  }
 }
 
 .category-card--new .category-card__media {
-  width: 282px;
-  height: 286px;
+  width: 100%;
+  max-width: 282px;
+  height: auto;
+  aspect-ratio: 282 / 286;
 }
 @media (min-width: 768px) {
   .category-card--new .category-card__media {
-    width: 424px;
-    height: 429px;
+    max-width: 424px;
+    aspect-ratio: 424 / 429;
   }
 }
 @media (min-width: 1024px) {
   .category-card--new .category-card__media {
-    width: 566px;
-    height: 572px;
+    max-width: 566px;
+    aspect-ratio: 566 / 572;
   }
 }
 
 .category-card--best .category-card__media {
-  width: 346px;
-  height: 219px;
+  width: 100%;
+  max-width: 346px;
+  height: auto;
+  aspect-ratio: 346 / 219;
 }
 @media (min-width: 768px) {
   .category-card--best .category-card__media {
-    width: 773px;
-    height: 489px;
+    max-width: 773px;
+    aspect-ratio: 773 / 489;
   }
 }
 @media (min-width: 1024px) {
   .category-card--best .category-card__media {
-    width: 1200px;
-    height: 759px;
+    max-width: 1200px;
+    aspect-ratio: 1200 / 759;
   }
 }
 
@@ -634,28 +644,32 @@ button {
 
 .category-card__image--lg {
   display: block;
-  width: 346px;
+  width: 100%;
+  max-width: 346px;
+  height: auto;
 }
 .category-card__image--md {
   display: block;
-  width: 161px;
+  width: 100%;
+  max-width: 161px;
+  height: auto;
   transform: translateY(0%);
   transition: transform 0.3s ease;
 }
 @media (min-width: 768px) {
   .category-card__image--lg {
-    width: 662px;
+    max-width: 662px;
   }
   .category-card__image--md {
-    width: 307.5px;
+    max-width: 307.5px;
   }
 }
 @media (min-width: 1024px) {
   .category-card__image--lg {
-    width: 978px;
+    max-width: 978px;
   }
   .category-card__image--md {
-    width: 454px;
+    max-width: 454px;
   }
 }
 
@@ -893,13 +907,13 @@ button {
 }
 @media (min-width: 768px) {
   .faq__list {
+    max-width: 800px;
     padding: 0 50px;
   }
 }
 @media (min-width: 1024px) {
   .faq__list {
-    max-width: 1050px;
-    padding: 0;
+    max-width: 1150px;
   }
 }
 
