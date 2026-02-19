@@ -1084,6 +1084,16 @@ button {
   top: 0;
   left: 0;
   font-size: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.inquiry__input:placeholder-shown + .inquiry__label,
+.inquiry__toggle.is-placeholder + .inquiry__label {
+  opacity: 0;
+}
+
+.inquiry__input:not(:placeholder-shown) + .inquiry__label,
+.inquiry__toggle:not(.is-placeholder) + .inquiry__label {
   opacity: 0.3;
 }
 
@@ -1096,6 +1106,7 @@ button {
 }
 
 .inquiry__input,
+.inquiry__label--placeholder,
 .inquiry__select {
   font-size: 14px;
 }
