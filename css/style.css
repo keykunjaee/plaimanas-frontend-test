@@ -1173,7 +1173,7 @@ button {
   flex-direction: column;
   gap: 55px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .footer {
     padding: 32px 60px 46px;
   }
@@ -1185,7 +1185,7 @@ button {
   flex-direction: column;
   gap: 62px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer__inner {
     flex-direction: row;
   }
