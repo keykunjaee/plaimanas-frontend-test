@@ -7,6 +7,8 @@ const navbarMenu = document.querySelector('.navbar__menu')
 
 const backdropWhite = document.querySelector('.navbar__backdrop--white')
 
+const heroTitle = document.querySelector('.hero__title')
+
 navbarToggle.addEventListener('click', () => {
   navbarMenu.classList.toggle('is-open')
   navbarToggle.classList.toggle('is-open')
@@ -16,8 +18,10 @@ navbarToggle.addEventListener('click', () => {
 
   if (isOpen) {
     backdropWhite.classList.add('is-open')
+    if (window.innerWidth < 768) heroTitle.classList.add('is-menu-open')
   } else {
     backdropWhite.classList.remove('is-open')
+    if (window.innerWidth < 768) heroTitle.classList.remove('is-menu-open')
   }
 })
 
@@ -100,6 +104,8 @@ function closeMenuItem() {
   backdrop.classList.remove('is-open')
 
   backdropWhite.classList.remove('is-open')
+
+  if (window.innerWidth < 768) heroTitle.classList.remove('is-menu-open')
 
   scrollToTop()
 }
