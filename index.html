@@ -494,104 +494,108 @@
 
       <!-- Inquiry Section -->
       <section class="inquiry">
-        <div class="inquiry__title">
-          <p class="inquiry__heading">Make an inquiry</p>
-          <p class="inquiry__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
-            nisl non rhoncus commodo.
-          </p>
-        </div>
-
-        <div class="inquiry__form">
-          <div class="inquiry__work-type">
-            <div class="inquiry__option">
-              <input
-                class="inquiry__radio"
-                type="radio"
-                id="work_type_onsite"
-                name="work_type"
-                value="onsite"
-                checked
-              />
-              <label for="work_type_onsite">Onsite</label>
-            </div>
-
-            <div class="inquiry__option">
-              <input
-                class="inquiry__radio"
-                type="radio"
-                id="work_type_hybrid"
-                name="work_type"
-                value="hybrid"
-              />
-              <label for="work_type_hybrid">Hybrid</label>
-            </div>
+        <div class="inquiry__content">
+          <div class="inquiry__title">
+            <p class="inquiry__heading">Make an inquiry</p>
+            <p class="inquiry__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              ornare, nisl non rhoncus commodo.
+            </p>
           </div>
 
-          <div class="inquiry__fields">
-            <div class="inquiry__field">
-              <input class="inquiry__input" placeholder="Full name*" />
-              <label for="full_name" class="inquiry__label">Full name*</label>
-            </div>
-            <div class="inquiry__field">
-              <input
-                type="email"
-                class="inquiry__input"
-                placeholder="Email*"
-                value="Plaimanas@gmail.com"
-              />
-              <label for="email" class="inquiry__label">Email*</label>
-            </div>
-            <div class="inquiry__field">
-              <input class="inquiry__input" placeholder="Phone Number*" />
-              <label for="phone_number" class="inquiry__label"
-                >Phone Number*</label
-              >
-            </div>
-
-            <div class="inquiry__select" id="inquiry-select">
-              <button type="button" class="inquiry__toggle is-placeholder">
-                <span class="inquiry__label--placeholder">Select Subject*</span>
-                <img
-                  src="./assets/icons/arrow-down-grey.svg"
-                  alt=""
-                  class="inquiry__arrow"
+          <div class="inquiry__form">
+            <div class="inquiry__work-type">
+              <div class="inquiry__option">
+                <input
+                  class="inquiry__radio"
+                  type="radio"
+                  id="work_type_onsite"
+                  name="work_type"
+                  value="onsite"
+                  checked
                 />
-              </button>
-              <label for="subject" class="inquiry__label">Subject*</label>
+                <label for="work_type_onsite">Onsite</label>
+              </div>
 
-              <ul class="inquiry__menu">
-                <li class="inquiry__item" data-value="general-inquiry">
-                  General inquiry
-                </li>
-                <li class="inquiry__item" data-value="job-application">
-                  Job Application
-                </li>
-                <li class="inquiry__item" data-value="media-&-press">
-                  Media & Press
-                </li>
-              </ul>
-
-              <input type="hidden" name="subject" />
+              <div class="inquiry__option">
+                <input
+                  class="inquiry__radio"
+                  type="radio"
+                  id="work_type_hybrid"
+                  name="work_type"
+                  value="hybrid"
+                />
+                <label for="work_type_hybrid">Hybrid</label>
+              </div>
             </div>
-          </div>
 
-          <div class="inquiry__agreement">
-            <label class="inquiry__checkbox">
-              <input
-                type="checkbox"
-                name="agreement"
-                value="accepted"
-                required
-              />
-              <span class="inquiry__checkmark"></span>
-              <span class="inquiry__agreement-text">
-                I agree to all terms & conditions
-              </span>
-            </label>
-          </div>
+            <div class="inquiry__fields">
+              <div class="inquiry__field">
+                <input class="inquiry__input" placeholder="Full name*" />
+                <label for="full_name" class="inquiry__label">Full name*</label>
+              </div>
+              <div class="inquiry__field">
+                <input
+                  type="email"
+                  class="inquiry__input"
+                  placeholder="Email*"
+                  value="Plaimanas@gmail.com"
+                />
+                <label for="email" class="inquiry__label">Email*</label>
+              </div>
+              <div class="inquiry__field">
+                <input class="inquiry__input" placeholder="Phone Number*" />
+                <label for="phone_number" class="inquiry__label"
+                  >Phone Number*</label
+                >
+              </div>
 
-          <button type="submit" class="inquiry__submit">SEND</button>
+              <div class="inquiry__select" id="inquiry-select">
+                <button type="button" class="inquiry__toggle is-placeholder">
+                  <span class="inquiry__label--placeholder"
+                    >Select Subject*</span
+                  >
+                  <img
+                    src="./assets/icons/arrow-down-grey.svg"
+                    alt=""
+                    class="inquiry__arrow"
+                  />
+                </button>
+                <label for="subject" class="inquiry__label">Subject*</label>
+
+                <ul class="inquiry__menu">
+                  <li class="inquiry__item" data-value="general-inquiry">
+                    General inquiry
+                  </li>
+                  <li class="inquiry__item" data-value="job-application">
+                    Job Application
+                  </li>
+                  <li class="inquiry__item" data-value="media-&-press">
+                    Media & Press
+                  </li>
+                </ul>
+
+                <input type="hidden" name="subject" />
+              </div>
+            </div>
+
+            <div class="inquiry__agreement">
+              <label class="inquiry__checkbox">
+                <input
+                  type="checkbox"
+                  name="agreement"
+                  value="accepted"
+                  required
+                />
+                <span class="inquiry__checkmark"></span>
+                <span class="inquiry__agreement-text">
+                  I agree to all terms & conditions
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="inquiry__submit">SEND</button>
+          </div>
         </div>
 
         <button class="inquiry__back-to-top" id="back-to-top">HOMEPAGE</button>

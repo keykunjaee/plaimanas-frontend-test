@@ -1026,19 +1026,30 @@ button {
   padding: 100px 22px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   gap: 60px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .inquiry {
-    max-width: 650px;
-  }
 }
 @media (min-width: 1024px) {
   .inquiry {
     padding: 100px 0;
+  }
+}
+
+.inquiry__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 400px;
+}
+@media (min-width: 768px) {
+  .inquiry__content {
+    max-width: 650px;
+  }
+}
+@media (min-width: 1024px) {
+  .inquiry__content {
     flex-direction: row;
     gap: 145px;
     max-width: unset;
@@ -1294,6 +1305,10 @@ button {
   .inquiry__back-to-top {
     bottom: 0px;
   }
+}
+
+.inquiry__back-to-top:hover {
+  opacity: 0.5;
 }
 
 /* Footer Section */
