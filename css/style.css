@@ -1276,6 +1276,7 @@ button {
 
 .inquiry__back-to-top {
   color: var(--color-black);
+  -webkit-text-fill-color: var(--color-black);
   position: absolute;
   left: 10px;
   bottom: 10px;
