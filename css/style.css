@@ -154,6 +154,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  color: var(--color-black);
   background: var(--color-white);
   opacity: 1;
   z-index: 10;
@@ -237,7 +238,7 @@ button {
     pointer-events: none;
   }
   .navbar__backdrop.is-open {
-    background: black;
+    background: var(--color-black);
   }
 }
 
@@ -329,6 +330,7 @@ button {
   gap: 4px;
   font-size: 13px;
   font: inherit;
+  color: var(--color-black);
   width: 100%;
   opacity: 1;
 }
@@ -750,7 +752,7 @@ button {
 .scroll-banner {
   position: relative;
   height: 85px;
-  background: black;
+  background: var(--color-black);
   overflow: hidden;
 }
 
@@ -786,7 +788,7 @@ button {
   display: flex;
   align-items: center;
   gap: 20px;
-  color: white;
+  color: var(--color-white);
   font-size: 60px;
   white-space: nowrap;
 }
@@ -805,7 +807,7 @@ button {
   font-family: 'HankenGrotesk', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
-  color: white;
+  color: var(--color-white);
   font-size: 24px;
   white-space: nowrap;
 }
@@ -1273,6 +1275,7 @@ button {
 }
 
 .inquiry__back-to-top {
+  color: var(--color-black);
   position: absolute;
   left: 10px;
   bottom: 10px;
@@ -1372,6 +1375,7 @@ button {
 .footer__subscribe-btn {
   width: 100%;
   background: #e0e0e0;
+  color: var(--color-black);
   padding: 10px 0;
   font-size: 12px;
   margin-top: 18px;
