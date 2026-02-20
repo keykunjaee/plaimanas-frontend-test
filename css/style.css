@@ -165,6 +165,11 @@ button {
   opacity: 0.5;
 }
 
+.navbar__lang-option {
+  color: var(--color-black);
+  -webkit-text-fill-color: var(--color-black);
+}
+
 .navbar__lang-label,
 .navbar__lang-option,
 .navbar__signin {
@@ -305,7 +310,7 @@ button {
   font-weight: 700;
   transform: scale(1.5);
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .navbar__item:hover > .navbar__link,
   .navbar__link--label {
     font-weight: 700;
