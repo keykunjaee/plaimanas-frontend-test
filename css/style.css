@@ -1188,6 +1188,13 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--color-black);
+  -webkit-text-fill-color: var(--color-black);
+}
+
+.inquiry__label--placeholder {
+  color: var(--color-black);
+  -webkit-text-fill-color: var(--color-black);
 }
 
 .inquiry__toggle.is-placeholder .inquiry__label--placeholder {
