@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-_To be deployed_
+🔗 https://keykunjaee.github.io/plaimanas-frontend-test/
 
 ## 💻 Tech Stack
 
